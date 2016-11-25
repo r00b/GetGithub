@@ -1,32 +1,91 @@
 %body
   %h3 Hi, #{@user.name}! Listed below is your public GitHub profile information:
   %br
-  %p <strong>GitHub username:</strong> #{@user.login}
-  %p <strong>GitHub ID:</strong> #{@user.id}
-  %p <strong>Name:</strong> #{@user.name}
-  %p <strong>Company:</strong> #{@user.company}
-  %p <strong>Blog:</strong> #{@user.blog}
-  %p <strong>Email:</strong> #{@user.email}
-  %p <strong>Hireable?</strong> #{@user.hireable}
-  %p <strong>User bio:</strong> #{@user.bio}
-  %p <strong>Number of public repos:</strong> #{@user.public_repos}
-  %p <strong>Number of public gists:</strong> #{@user.public_gists}
-  %p <strong>Number of followers:</strong> #{@user.followers}
-  %p <strong>Number following:</strong> #{@user.following}
-  %p <strong>Avatar URL:</strong> #{@user.avatar_url}
-  %p <strong>Gravatar ID:</strong> #{@user.gravatar_id}
-  %p <strong>API URL:</strong> #{@user.url}
-  %p <strong>GitHub profile URL:</strong> #{@user.html_url}
-  %p <strong>Followers URL:</strong> #{@user.followers_url}
-  %p <strong>Following URL:</strong> #{@user.following_url}
-  %p <strong>Gists URL:</strong> #{@user.gists_url}
-  %p <strong>Starred repos URL:</strong> #{@user.starred_url}
-  %p <strong>Subscriptions URL:</strong> #{@user.subscriptions_url}
-  %p <strong>Organizations URL:</strong> #{@user.organizations_url}
-  %p <strong>Repos URL:</strong> #{@user.repos_url}
-  %p <strong>Events URL:</strong> #{@user.events_url}
-  %p <strong>Received events URL:</strong> #{@user.received_events_url}
-  %p <strong>User type:</strong> #{@user.type}
-  %p <strong>GitHub admin?</strong> #{@user.site_admin}
-  %p <strong>User created at</strong> #{@user.created_at}
-  %p <strong>User last updated at</strong> #{@user.updated_at}
+  %table
+    %tr
+      %td <strong>GitHub username</strong>
+      %td #{@user.login}
+    %tr
+      %td <strong>GitHub ID</strong>
+      %td #{@user.id}
+    %tr
+      %td <strong>Name</strong>
+      %td #{@user.name}
+    %tr
+      %td <strong>Company</strong>
+      %td #{@user.company}
+    %tr
+      %td <strong>Blog</strong>
+      %td #{@user.blog}
+    %tr
+      %td <strong>Email</strong>
+      %td #{@user.email}
+    %tr
+      %td <strong>Hireable?</strong>
+      %td #{@user.hireable}
+    %tr
+      %td <strong>Bio</strong>
+      %td #{@user.bio}
+    %tr
+      %td <strong>Number of public repos</strong>
+      %td #{@user.repos}
+    %tr
+      %td <strong>Number of public gists</strong>
+      %td #{@user.gists}
+    %tr
+      %td <strong>Number of followers</strong>
+      %td #{@user.followers}
+    %tr
+      %td <strong>Number following</strong>
+      %td #{@user.following}
+    %tr
+      %td <strong>Avatar URL</strong>
+      %td #{@user.avatar_url}
+    %tr
+      %td <strong>Gravatar ID</strong>
+      %td #{@user.gravatar_id}
+    %tr
+      %td <strong>API URL</strong>
+      %td #{@user.url}
+    %tr
+      %td <strong>Github profile URL</strong>
+      %td #{@user.html_url}
+    %tr
+      %td <strong>Followers URL</strong>
+      %td #{@user.followers_url}
+    %tr
+      %td <strong>Following URL</strong>
+      %td #{@user.following_url}
+    %tr
+      %td <strong>Gists URL</strong>
+      %td #{@user.gists_url}
+    %tr
+      %td <strong>Starred repos</strong>
+      %td #{@user.starred_url}
+    %tr
+      %td <strong>Subscriptions URL</strong>
+      %td #{@user.subscriptions_url}
+    %tr
+      %td <strong>Organizations URL</strong>
+      %td #{@user.organizations_url}
+    %tr
+      %td <strong>Repos URL</strong>
+      %td #{@user.repos_url}
+    %tr
+      %td <strong>Events URL</strong>
+      %td #{@user.events_url}
+    %tr
+      %td <strong>Received events URL</strong>
+      %td #{@user.received_events_url}
+    %tr
+      %td <strong>User type</strong>
+      %td #{@user.type}
+    %tr
+      %td <strong>GitHub admin?</strong>
+      %td #{@user.site_admin}
+    %tr
+      %td <strong>User created</strong>
+      %td #{@user.created_at}
+    %tr
+      %td <strong>User last updated</strong>
+      %td #{@user.updated_at}          
