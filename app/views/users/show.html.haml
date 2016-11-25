@@ -1,2 +1,32 @@
 %body
-  %h3 User information for #{@user.login}:
+  %h3 Hi, #{@user.name}! Listed below is your public GitHub profile information:
+  %br
+  %p <strong>GitHub username:</strong> #{@user.login}
+  %p <strong>GitHub ID:</strong> #{@user.id}
+  %p <strong>Name:</strong> #{@user.name}
+  %p <strong>Company:</strong> #{@user.company}
+  %p <strong>Blog:</strong> #{@user.blog}
+  %p <strong>Email:</strong> #{@user.email}
+  %p <strong>Hireable?:</strong> #{@user.hireable}
+  %p <strong>User bio:</strong> #{@user.bio}
+  %p <strong>Number of public repos:</strong> #{@user.public_repos}
+  %p <strong>Number of public gists:</strong> #{@user.public_gists}
+  %p <strong>Number of followers:</strong> #{@user.followers}
+  %p <strong>Number following:</strong> #{@user.following}
+  %p <strong>Avatar URL:</strong> #{@user.avatar_url}
+  %p <strong>Gravatar ID:</strong> #{@user.gravatar_id}
+  %p <strong>API URL:</strong> #{@user.url}
+  %p <strong>GitHub profile URL:</strong> #{@user.html_url}
+  %p <strong>Followers URL:</strong> #{@user.followers_url}
+  %p <strong>Following URL:</strong> #{@user.following_url}
+  %p <strong>Gists URL:</strong> #{@user.gists_url}
+  %p <strong>Starred repos URL:</strong> #{@user.starred_url}
+  %p <strong>Subscriptions URL:</strong> #{@user.subscriptions_url}
+  %p <strong>Organizations URL:</strong> #{@user.organizations_url}
+  %p <strong>Repos URL:</strong> #{@user.repos_url}
+  %p <strong>Events URL:</strong> #{@user.events_url}
+  %p <strong>Received events URL:</strong> #{@user.received_events_url}
+  %p <strong>User type:</strong> #{@user.type}
+  %p <strong>GitHub admin?:</strong> #{@user.site_admin}
+  %p <strong>User created at</strong> #{@user.created_at}
+  %p <strong>User last updated at</strong> #{@user.updated_at}
