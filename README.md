@@ -1,29 +1,49 @@
-# Rails Developer Intern Interview Exercise
+# Rails Developer Intern Interview Exercise: robertsteilberg
 
-## Welcome
+Note: The given instructions for this exercise have been relocated to `INSTRUCTIONS.md`.
 
-Hi, and thanks for applying for the __Rails Developer Intern__ position with the [GitHub Education](https://education.github.com) team.
+## Features
 
-This exercise is designed to give you an opportunity to show off programming skills that would be relevant to work on [GitHub Classroom](https://classroom.github.com) ([source](https://github.com/education/classroom)).
+GetGitHub is a simple Rails application that allows a user to authenticate with their GitHub credentials and then view their public GitHub profile information. The application persists a GitHub API `access_token` so that users need not authenticate repeatedly to see their information. Updated profile information is immediately reflected by the app.
 
-## Exercise instructions
+## Configure a local development server
 
-Please use this repository to develop a simple [Ruby on Rails](http://rubyonrails.org) application that allows a user to log in with GitHub. Once authorized, the application should display the public profile information and persist the `access_token`. You should make sure to always display up-to-date profile information.
+Follow the steps below to get a local instance of GetGitHub up and running on your machine.
 
-You can find all the information you need about the GitHub API on the [GitHub Developer](https://developer.github.com/) site.
+### Setting up your Ruby environment
 
-## Evaluation
+First, you'll need to install Ruby 2.3.2. I recommend using [rbenv](https://github.com/sstephenson/rbenv).
 
-Your submission will be evaluated against the following criteria:
+```
+rbenv install 2.3.2
+```
+Next, navigate to the `rails-developer-intern-robertsteilberg` directory and run:
 
-* Meets the stated requirements
-* Code is high quality, well organized, and secure
-* Best practices are followed including:
-  * Version control
-  * Iterative development
-  * Automated testing
-  * Build scripts
+```
+rbenv local 2.3.2
+```
 
-## Submission
+### Configuring gems and environment variables
 
-To submit your work, please deploy your application to [Heroku](https://heroku.com) using the free tier and then mention the `@education-interview-exercises/rails-developer-intern-reviewers` team to let us know you're ready to have us take a look at your code. Don't forget to include a link to your production deployment.
+Next, install the bundler gem so that you can install gems from the `Gemfile`.
+
+```bash
+gem install bundler && rbenv rehash
+```
+Once bundler is installed, you can go ahead and run the `setup` script:
+```
+script/setup
+```
+The `setup` script will prompt you to enter your GitHub-registered application's `CLIENT_ID` and `CLIENT_SECRET`, which will be stored as environment variables for security. You can register your application [here](https://github.com/settings/applications/new). The Homepage URL should be `http://localhost:3000/` and the Authorization Callback URL should be `http://localhost:3000/callbacks/new` for your development server. After registering your application, you'll have access to the generated `CLIENT_ID` and `CLIENT_SECRET`.
+
+### Next steps
+
+The app can now be run with
+```
+rails s
+```
+and accessed at `http://localhost:3000/`.
+
+### Automated tests
+
+The RSpec automated tests can be run via `rake`.
