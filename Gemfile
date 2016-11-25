@@ -29,6 +29,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # Use dotenv for defining ENV variables in development
   gem 'dotenv-rails'
+  gem 'dotenv-heroku'
 end
 
 group :development do
