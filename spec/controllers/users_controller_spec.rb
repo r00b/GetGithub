@@ -9,4 +9,13 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  it 'returns nil if user has not authenticated' do
+    controller.authenticated?.should == nil
+  end
+
+  it 'prompts user to authenticate if user has not authenticated' do
+    get :index
+    expect(response).to redirect_to("/github/authenticate")
+  end
+
 end
