@@ -22,14 +22,14 @@ gem "octokit"
 # Use rest-client for using RESTful web services
 gem "rest-client"
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # Use dotenv for defining ENV variables in development
-  # gem 'dotenv-rails'
-  gem 'dotenv-heroku'
 end
 
 group :development do
