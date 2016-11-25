@@ -28,10 +28,10 @@
       %td #{@user.bio}
     %tr
       %td <strong>Number of public repos</strong>
-      %td #{@user.repos}
+      %td #{@user.public_repos}
     %tr
       %td <strong>Number of public gists</strong>
-      %td #{@user.gists}
+      %td #{@user.public_gists}
     %tr
       %td <strong>Number of followers</strong>
       %td #{@user.followers}
@@ -40,43 +40,55 @@
       %td #{@user.following}
     %tr
       %td <strong>Avatar URL</strong>
-      %td #{@user.avatar_url}
+      %td
+        %a{:href => "#{@user.avatar_url}", :target => "_blank"}>#{@user.avatar_url}
     %tr
       %td <strong>Gravatar ID</strong>
       %td #{@user.gravatar_id}
     %tr
       %td <strong>API URL</strong>
-      %td #{@user.url}
+      %td
+        %a{:href => "#{@user.url}", :target => "_blank"}>#{@user.url}
     %tr
       %td <strong>Github profile URL</strong>
-      %td #{@user.html_url}
+      %td
+        %a{:href => "#{@user.html_url}", :target => "_blank"}>#{@user.html_url}
     %tr
       %td <strong>Followers URL</strong>
-      %td #{@user.followers_url}
+      %td
+        %a{:href => "#{@user.followers_url}", :target => "_blank"}>#{@user.followers_url}
     %tr
       %td <strong>Following URL</strong>
-      %td #{@user.following_url}
+      %td
+        %a{:href => "#{@user.following_url}", :target => "_blank"}>#{@user.following_url}
     %tr
       %td <strong>Gists URL</strong>
-      %td #{@user.gists_url}
+      %td
+        %a{:href => "#{@user.gists_url}", :target => "_blank"}>#{@user.gists_url}
     %tr
       %td <strong>Starred repos</strong>
-      %td #{@user.starred_url}
+      %td
+        %a{:href => "#{@user.starred_url}", :target => "_blank"}>#{@user.starred_url}
     %tr
       %td <strong>Subscriptions URL</strong>
-      %td #{@user.subscriptions_url}
+      %td
+        %a{:href => "#{@user.subscriptions_url}", :target => "_blank"}>#{@user.subscriptions_url}
     %tr
       %td <strong>Organizations URL</strong>
-      %td #{@user.organizations_url}
+      %td
+        %a{:href => "#{@user.organizations_url}", :target => "_blank"}>#{@user.organizations_url}
     %tr
       %td <strong>Repos URL</strong>
-      %td #{@user.repos_url}
+      %td
+        %a{:href => "#{@user.repos_url}", :target => "_blank"}>#{@user.repos_url}
     %tr
       %td <strong>Events URL</strong>
-      %td #{@user.events_url}
+      %td
+        %a{:href => "#{@user.events_url}", :target => "_blank"}>#{@user.events_url}
     %tr
       %td <strong>Received events URL</strong>
-      %td #{@user.received_events_url}
+      %td
+        %a{:href => "#{@user.received_events_url}", :target => "_blank"}>#{@user.received_events_url}
     %tr
       %td <strong>User type</strong>
       %td #{@user.type}
@@ -88,4 +100,4 @@
       %td #{@user.created_at}
     %tr
       %td <strong>User last updated</strong>
-      %td #{@user.updated_at}          
+      %td #{@user.updated_at}
