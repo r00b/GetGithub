@@ -1,0 +1,15 @@
+#!/bin/bash
+
+ENV=.env # path to .env
+
+echo "==> Installing required gems..."
+eval "bundle install"
+
+echo "==> Initializing development environment variables..."
+echo "==> Please enter your GitHub application Client ID:"
+read CLIENT_ID
+echo "==> Please enter your GitHub application Client Secret:"
+read CLIENT_SECRET
+
+echo "GITHUB_CLIENT_ID=$CLIENT_ID" >> "$ENV"
+echo "GITHUB_CLIENT_SECRET=$CLIENT_SECRET" >> "$ENV"
