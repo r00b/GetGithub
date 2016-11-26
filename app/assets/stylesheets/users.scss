@@ -36,20 +36,24 @@ p {
   cursor: pointer;
 }
 
+span {
+  font-weight: bold;
+}
+
 table {
-    border-collapse: collapse;
-    width: 800px;
-    margin: 0 auto;
+  border-collapse: collapse;
+  width: 800px;
+  margin: 0 auto;
 }
 
 td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 4px;
-    font-family: $default-font;
-    font-size: 12px;
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 4px;
+  font-family: $default-font;
+  font-size: 12px;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+  background-color: #dddddd;
 }
