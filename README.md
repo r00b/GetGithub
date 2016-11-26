@@ -1,10 +1,16 @@
 # Rails Developer Intern Interview Exercise: robertsteilberg
 
-Note: The given instructions for this exercise have been relocated to `INSTRUCTIONS.md`.
+Note: The instructions given for this exercise have been relocated to `INSTRUCTIONS.md`.
 
 ## Features
 
 GetGitHub is a simple Rails application that allows a user to authenticate with their GitHub credentials and then view their public GitHub profile information. The application persists a GitHub API `access_token` so that users need not authenticate repeatedly to see their information. Updated profile information is immediately reflected by the app.
+
+Note: I decided to use REST rather than Octokit for creating new app authorizations so that any password-based authentication would be handled through GitHub.
+
+## Usage
+
+Upon clicking "Yes, please!", you will need to authorize the app to access the pubic profile information associated with your account. If you want to go back through the authentication flow, you will need to either revoke all user tokens in the app's GitHub settings or revoke your specific application token in your GitHub settings. To authenticate a different user, log out of GitHub and then navigate back to `users/authenticate`.
 
 ## Configure a local development server
 
@@ -12,7 +18,7 @@ Follow the steps below to get a local instance of GetGitHub up and running on yo
 
 ### Setting up your Ruby environment
 
-First, you'll need to install Ruby 2.3.2. I recommend using [rbenv](https://github.com/sstephenson/rbenv).
+First, you'll need to install Ruby 2.3.2. You can [rbenv](https://github.com/sstephenson/rbenv) to do this:
 
 ```
 rbenv install 2.3.2
