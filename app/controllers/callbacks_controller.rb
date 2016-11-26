@@ -13,5 +13,4 @@ class CallbacksController < ApplicationController
     session[:current_access_token] = JSON.parse(result)['access_token']
     redirect_to "/users/show"
   end
-  
 end
