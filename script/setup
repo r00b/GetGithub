@@ -14,4 +14,4 @@ read CLIENT_SECRET
 echo "GITHUB_CLIENT_ID=$CLIENT_ID" > "$ENV" # overwrite existing CLIENT variables
 echo "GITHUB_CLIENT_SECRET=$CLIENT_SECRET" >> "$ENV"
 
-echo "==> The app is ready; deploy with rails s!"
+echo "==> The app is ready; deploy with 'rails s'!"
