@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def authenticated?
-    session[:accessToken]
+    session[:current_access_token]
   end
 
   def authenticate!
@@ -13,12 +13,13 @@ class UsersController < ApplicationController
       authenticate!
     else
       begin
-        client = Octokit::Client.new(:access_token => session[:accessToken])
+        client = Octokit::Client.new(:access_token => session[:current_access_token])
         @user = client.user
-      rescue => e # accessToken has expired
-        session[:accessToken] = nil
-        return authenticate! # go for re-authentication
+      rescue => e # currrent_access_token has expired
+        session[:current_access_token] = nil
+        return authenticate! # put user back through authentication flow
       end
     end
   end
+  
 end
