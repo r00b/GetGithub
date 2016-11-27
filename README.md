@@ -2,6 +2,8 @@
 
 Note: The instructions given for this exercise have been relocated to `INSTRUCTIONS.md`.
 
+The app has been deployed to Heroku [here](https://get-github.herokuapp.com/).
+
 ## Features
 
 GetGitHub is a simple Rails application that allows a user to authenticate with their GitHub credentials and then view their public GitHub profile information. The application persists a GitHub API `access_token` so that users need not authenticate repeatedly to see their information. Updated profile information is immediately reflected by the app.
